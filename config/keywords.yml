@@ -1,0 +1,42 @@
+# A posting matches when its title contains at least one term from
+# `role_terms` AND at least one term from `level_terms`.
+# Edit freely -- no code changes needed, the fetch script reads this file.
+
+role_terms:
+  - data scientist
+  - data science
+  - data engineer
+  - data engineering
+  - machine learning engineer
+  - machine learning
+  - ml engineer
+  - ai engineer
+  - artificial intelligence engineer
+  - applied scientist
+  - applied ai
+  - research scientist
+  - deep learning
+  - nlp engineer
+  - natural language processing
+  - computer vision engineer
+  - mlops
+  - ai/ml
+  - ai researcher
+
+level_terms:
+  - intern
+  - internship
+  - co-op
+  - coop
+  - summer 2026
+  - summer 2027
+
+# Titles containing any of these are dropped even if they matched above
+# (senior/full-time roles that happen to mention "intern" in the description).
+exclude_terms:
+  - senior
+  - staff
+  - principal
+  - director
+  - manager
+  - lead

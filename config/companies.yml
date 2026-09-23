@@ -1,0 +1,47 @@
+# Companies whose public ATS job boards get checked every run.
+# No login/API key needed -- Greenhouse and Lever both expose a public,
+# unauthenticated JSON endpoint per company.
+#
+# This is a SEED list based on which ATS each company is known to use.
+# ATS choice changes over time (companies migrate providers), so some
+# slugs here may 404 -- that's expected and harmless, the fetcher just
+# skips them and logs a warning. Run `python scripts/check_companies.py`
+# after cloning to see which slugs currently resolve, and prune/add from
+# there. Add any company you care about by finding its careers page URL:
+#   Greenhouse: boards.greenhouse.io/<slug>          -> ats: greenhouse
+#   Lever:      jobs.lever.co/<slug>                  -> ats: lever
+
+companies:
+  - { name: Stripe,        ats: greenhouse, slug: stripe }
+  - { name: Airbnb,        ats: greenhouse, slug: airbnb }
+  - { name: Robinhood,     ats: greenhouse, slug: robinhood }
+  - { name: Coinbase,      ats: greenhouse, slug: coinbase }
+  - { name: DoorDash,      ats: greenhouse, slug: doordashusa }
+  - { name: Affirm,        ats: greenhouse, slug: affirm }
+  - { name: Figma,         ats: greenhouse, slug: figma }
+  - { name: Databricks,    ats: greenhouse, slug: databricks }
+  - { name: Asana,         ats: greenhouse, slug: asana }
+  - { name: Reddit,        ats: greenhouse, slug: reddit }
+  - { name: Pinterest,     ats: greenhouse, slug: pinterest }
+  - { name: Discord,       ats: greenhouse, slug: discord }
+  - { name: Instacart,     ats: greenhouse, slug: instacart }
+  - { name: Lyft,          ats: greenhouse, slug: lyft }
+  - { name: Dropbox,       ats: greenhouse, slug: dropbox }
+  - { name: GitLab,        ats: greenhouse, slug: gitlab }
+  - { name: Cloudflare,    ats: greenhouse, slug: cloudflare }
+  - { name: Roblox,        ats: greenhouse, slug: roblox }
+  - { name: Squarespace,   ats: greenhouse, slug: squarespace }
+  - { name: Samsara,       ats: greenhouse, slug: samsara }
+  - { name: Netlify,       ats: greenhouse, slug: netlify }
+  - { name: Attentive,     ats: greenhouse, slug: attentive }
+  - { name: Brex,          ats: greenhouse, slug: brex }
+  - { name: Anthropic,     ats: greenhouse, slug: anthropic }
+  - { name: Gusto,         ats: greenhouse, slug: gusto }
+  - { name: Flexport,      ats: greenhouse, slug: flexport }
+  - { name: Palantir,      ats: lever,      slug: palantir }
+  - { name: Mistral AI,    ats: lever,      slug: mistral }
+  - { name: Notion,        ats: ashby,      slug: notion }
+  - { name: Snowflake,     ats: ashby,      slug: snowflake }
+  - { name: Ramp,          ats: ashby,      slug: ramp }
+  - { name: Plaid,         ats: ashby,      slug: plaid }
+  - { name: OpenAI,        ats: ashby,      slug: openai }

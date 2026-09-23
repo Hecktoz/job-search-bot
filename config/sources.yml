@@ -1,0 +1,20 @@
+# Community-maintained internship tracker feeds (in addition to the ATS
+# boards in companies.yml and the Adzuna/Google Jobs APIs). These are
+# public JSON files that bots for these GitHub repos update many times a
+# day as people submit postings -- no API key needed.
+#
+# The repo names include the internship season/year and get renamed each
+# cycle (e.g. Summer2027-Internships -> Summer2028-Internships next year).
+# If a feed starts 404ing, check the repo's current name on GitHub and
+# update it here.
+
+github_internship_feeds:
+  - name: SimplifyJobs
+    repo: SimplifyJobs/Summer2027-Internships
+    branch: dev
+    path: .github/scripts/listings.json
+
+  - name: vanshb03
+    repo: vanshb03/Summer2027-Internships
+    branch: dev
+    path: .github/scripts/listings.json

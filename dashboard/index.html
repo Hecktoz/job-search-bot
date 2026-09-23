@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Internship Job Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Internship Job Dashboard</h1>
+    <p id="meta" class="meta">Loading...</p>
+    <p class="submeta">US-based postings only</p>
+  </header>
+
+  <section class="controls">
+    <input id="search" type="search" placeholder="Search title, company, location..." />
+
+    <label class="checkbox">
+      <input type="checkbox" id="new-only" />
+      New today only
+    </label>
+
+    <select id="sort">
+      <option value="first_seen">Sort: newest found first</option>
+      <option value="posted_at">Sort: recently posted first</option>
+      <option value="company">Sort: company A-Z</option>
+    </select>
+  </section>
+
+  <section class="filter-row">
+    <span class="filter-label">Role</span>
+    <div class="filter-group" id="category-filters"></div>
+  </section>
+
+  <section class="filter-row">
+    <span class="filter-label">Source</span>
+    <div class="filter-group" id="source-filters"></div>
+  </section>
+
+  <section id="results"></section>
+
+  <template id="row-template">
+    <article class="job-card">
+      <div class="job-main">
+        <a class="job-title" target="_blank" rel="noopener"></a>
+        <span class="new-badge">NEW</span>
+        <div class="job-company"></div>
+      </div>
+      <div class="job-meta">
+        <span class="job-category"></span>
+        <span class="job-location"></span>
+        <span class="job-source"></span>
+        <span class="job-date"></span>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
